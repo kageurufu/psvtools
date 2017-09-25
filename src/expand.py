@@ -3,12 +3,13 @@ import sys
 import hashlib
 
 from .psv import *
+from .trim import find_end_of_data
 
 
 def expand_file(fp, op=None):
     psv_header = read_header(fp)
 
-    if psv_header.flags & FLAG_TRIMMED:
+    if not psv_header.flags & FLAG_TRIMMED:
         print("Not trimmed")
         return False
 
