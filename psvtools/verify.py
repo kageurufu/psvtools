@@ -7,7 +7,7 @@ from .psv import *
 
 def verify_file(fp, op=sys.stdout):
 	header = read_header(fp)
-	filehash = codecs.encode(b''.join(chr(c) for c in header.hash[:]), 'hex-codec')
+	filehash = codecs.encode(bytearray(header.hash), 'hex-codec').decode()
 
 	image_offset = header.image_offset_sector * 512
 	total_size = header.image_size
