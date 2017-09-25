@@ -13,7 +13,7 @@ def find_end_of_data(fp):
     searchres = 1 << 10
 
     while True:
-        fp.seek(-512 * searchres, os.SEEK_CUR)
+        fp.seek(max(-512 * searchres, -512), os.SEEK_CUR)
         buf = fp.read(512)
         fp.seek(-512, os.SEEK_CUR)
         if any(buf):
