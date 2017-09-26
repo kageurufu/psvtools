@@ -15,8 +15,9 @@ def find_end_of_data(fp):
     while True:
         fp.seek(max(-512 * searchres, -512), os.SEEK_CUR)
         buf = fp.read(512)
-        fp.seek(-512, os.SEEK_CUR)
-        if any(buf):
+        fp.seek(-len(buf), os.SEEK_CUR)
+
+        if any(c for c in buf if c != b'\x00'):
             if searchres == 1:
                 break
             else:

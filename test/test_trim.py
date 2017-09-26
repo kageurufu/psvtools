@@ -8,4 +8,4 @@ def test_trim():
 		trim_file(of, trimmed)
 
 	trimmed.seek(0)
-	assert hashlib.sha256(trimmed.getvalue()).hexdigest() == 'e642e1e8e6205bbcac769252c4200aa4af32f899564220e4dab7cb12668191bb'
+	assert hashlib.sha256(trimmed.getvalue()).hexdigest() == 'b66fec166c91d94ceb08d52481ab2cb5f408ae9839cb65b0e6daa9c8ddee0912'
