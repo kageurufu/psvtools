@@ -31,7 +31,8 @@ setup(
         "Programming Language :: Python",
         "Operating System :: POSIX :: Linux",
         "Topic :: System",
-        "Topic :: Processing"
+        "Topic :: System :: Archiving",
+        "Topic :: Utilities"
     ],
     include_package_data=True,
     zip_safe=False,
