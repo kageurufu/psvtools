@@ -10,9 +10,9 @@ with open(os.path.join(here, 'README.md')) as f:
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
-setup_requires = ["nose>=1.0"]
+setup_requires = ['pytest-runner']
 install_requires = []
-test_requires = []
+tests_require = ['pytest']
 
 setup(
     name="psvtools",
@@ -36,7 +36,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     setup_requires=setup_requires,
-    tests_require=test_requires,
+    tests_require=tests_require,
     install_requires=install_requires,
     test_suite="nose.collector",
     entry_points="""\
