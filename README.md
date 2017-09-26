@@ -1,4 +1,4 @@
-# psvtrim
+# psvtrim [![Build Status](https://travis-ci.org/kageurufu/psvtrim.svg?branch=master)](https://travis-ci.org/kageurufu/psvtrim)
 PSV file trimmer, restoration, and validation utility (Python)
 
 # Install
