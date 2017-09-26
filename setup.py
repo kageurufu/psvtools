@@ -12,7 +12,10 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 
 setup_requires = ['pytest-runner']
 install_requires = []
-tests_require = ['pytest']
+tests_require = [
+    'pytest',
+    'pytest-cov',
+]
 
 setup(
     name="psvtools",
